@@ -12,27 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
-    <script>
-        function genShortURL(event) {
-            event.preventDefault();
-
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            const short = document.getElementById("short").value;
-            const url = document.getElementById("url").value;
-
-            const data = { email, password, short, url };
-
-            axios
-                .post("/admin/urls/", data)
-                .then((response) => {
-                alert("Generated Short URL");
-                })
-                .catch((err) => {
-                alert("Failed to load");
-                });
-    }
-    </script>
+    <script src ="./genShortURL.js"></script>
   </head>
   <body>
     <ul class="nav justify-content-center nav-pills flex-column flex-sm-row">
